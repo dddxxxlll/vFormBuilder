@@ -4,7 +4,7 @@ const path = require('path')
 // const resolve = dir => path.resolve(__dirname, dir)
 
 module.exports = {
-  outputDir: 'dist', // 'dist', 生产环境构建文件的目录
+  outputDir: 'docs', // 'dist', 生产环境构建文件的目录
   //baseUrl:'./',
   publicPath: './',
   indexPath:'index.html',

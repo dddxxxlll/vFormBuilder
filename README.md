@@ -1,4 +1,10 @@
-# vue
+# vFormBuilder
+
+## 简介
+一个基于Vuejs的表单生成器
+
+## 在线演示地址
+<a href="https://dddxxxlll.github.io/vFormBuilder/">https://dddxxxlll.github.io/vFormBuilder/</a>
 
 ## Project setup
 ```
@@ -20,5 +26,3 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
