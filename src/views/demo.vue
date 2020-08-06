@@ -21,7 +21,7 @@
             </dl>
         </div>
         <div class="middleBox">
-            <FormBuilder @switchQuestion="switchQuestion" @addOption="addOption" @delOption="delOption" @delQuestion="delQuestion" @selectQuestion="selectQuestion" :editMode="editMode" :formData="formData" class="formBuilder"></FormBuilder>
+            <vformbuilder @updateFormData="updateFormData" @switchQuestion="switchQuestion" @addOption="addOption" @delOption="delOption" @delQuestion="delQuestion" @selectQuestion="selectQuestion" :editMode="editMode" :formData="formData" class="formBuilder"></vformbuilder>
         </div>
         <div class="rightBox">
             <div class="title">
@@ -120,7 +120,7 @@
                 </el-form>
             </div>
             <div class="save" @click="saveData">
-                保存
+                保存并预览
             </div>
         </div>
         <el-dialog
@@ -165,7 +165,7 @@
                         </el-select>
                     </el-form-item>
                     <el-form-item label="选项" v-if="logicSelected!=-1">
-                        <el-select v-model="formData[logicSelected].isShow.value" placeholder="请选择选项">
+                        <el-select v-model="formData[selectedIndex].isShow.value" placeholder="请选择选项">
                             <el-option
                                 v-for="(item) in logicOptions"
                                 :key="item.value"
@@ -175,7 +175,7 @@
                         </el-select>
                     </el-form-item>
                     <el-form-item label="条件" v-if="logicSelected!=-1">
-                        <el-switch v-model="formData[logicSelected].isShow.check" active-text="选中" inactive-text="不选中" :active-value="true" :inactive-value="false"></el-switch>
+                        <el-switch v-model="formData[selectedIndex].isShow.check" active-text="选中" inactive-text="不选中" :active-value="true" :inactive-value="false"></el-switch>
                     </el-form-item>
                 </el-form>
             </template>
@@ -187,7 +187,8 @@
 </template>
 
 <script>
-import FormBuilder from "../components/formBuilder"
+//import FormBuilder from "../components/formBuilder"
+//import FormBuilder from '../../dist/vFormBuilder.min.js'
 export default {
     name: 'formBuilder',
     data() {
@@ -842,12 +843,15 @@ export default {
                 }
             }
         },
+        updateFormData(formData) {
+            this.formData = formData;
+        },
         saveData() {
             console.log("保存数据:",this.formData);
         }
     },
     components: {
-        FormBuilder
+        //FormBuilder
     }
 }
 </script>

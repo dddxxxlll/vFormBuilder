@@ -2,6 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import { Button, Select, Option, Radio, RadioGroup, Input, Checkbox, CheckboxGroup, DatePicker, Table, TableColumn, Form, FormItem, Switch, MessageBox, Message, Dialog } from 'element-ui';
 require("./assets/reset.css")
+import vformbuilder from 'vformbuilder-dddxxxlll'
+require('../node_modules/vformbuilder-dddxxxlll/lib/vformbuilder.css')
+
+Vue.use(vformbuilder)
 
 Vue.use(Button)
 Vue.use(Select)

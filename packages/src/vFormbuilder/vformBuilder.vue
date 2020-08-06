@@ -350,7 +350,7 @@
 
 <script>
 export default {
-    name: 'FormBuilder',
+    name: 'vformbuilder',
     props: {
         formData: {
             type: Array,
